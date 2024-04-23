@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    oi
-</body>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Plataforma desenvolvida por Daniel ?? e Matheus Faustino"
+    />
+    <meta name="description" content="Sistema desenvolvido para..." />
+
+    <link
+      rel="shortcut icon"
+      href="assets/caminhos-logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/login.css" />
+
+    <title>Página de Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-field">
+        <img src="assets/cc-sys-logo.svg" alt="cc-sys-logo" />
+
+        <h2>Bem-vindo de volta</h2>
+
+        <form action="/login" method="post">
+          <input type="text" placeholder="Nome de usuário" name="username"/>
+
+          <input type="password" placeholder="Senha" name="password" />
+
+          <p name = "erro" id="erro" class="check_data">Por favor, verifique seus dados</p>
+
+          <label for="stay_connected">
+            <input type="checkbox" id="stay_connected" />
+            <p>Manter-me conectado</p>
+          </label>
+
+          <input type="submit" value="Entrar" />
+
+          <a href="#">Não consegue iniciar sessão?</a>
+          <a href="/criarUsuario">Criar conta</a>
+        </form>
+      </div>
+      <div class="illustration-field">
+        <img src="assets/illustration.svg" alt="illustration" />
+      </div>
+    </div>
+  </body>
 </html>

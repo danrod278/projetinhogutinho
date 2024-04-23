@@ -1,0 +1,1 @@
+//receber todas as funções por aqui para distribuí-las
