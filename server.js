@@ -15,6 +15,7 @@ app.use(express.static('public'))
 app.use('/', login)
 app.use("/", novoUsuario)
 
-app.listen(3000, ()=>{
-    console.log("Esta rodando na porta 3000")
+const port = 3000
+app.listen(port, ()=>{
+    console.log("Esta rodando na porta "+port)
 })

@@ -26,3 +26,5 @@ const schemaUsuarios = new mongoose.Schema({
     
 }
 )
+
+module.exports = {schemaUsuarios}

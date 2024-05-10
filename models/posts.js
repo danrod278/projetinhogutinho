@@ -16,3 +16,5 @@ const schemaPosts = new mongoose.Schema({
         required: true,
     }],
 })
+
+module.exports = {schemaPosts}
