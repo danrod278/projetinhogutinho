@@ -1,3 +1,5 @@
-const  {Clientes, sequelize, Sequelize} = require("../DB/models")
+const {connect} = require("../DB/db")
+const {Posts} = require("../models/posts")
+const {Usuarios} = require("../models/usuarios")
 
-module.exports =  {Clientes, sequelize, Sequelize}
+module.exports =  {Usuarios, Posts, connect}
