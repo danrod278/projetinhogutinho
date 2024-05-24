@@ -1,5 +1,6 @@
 const {Usuarios, connect} = require("./dependencias")
-const {criptodescriptografador} = require("./criptografar")
+const {criptografar} = require("./criptografia")
+const {v4: uuidv4} = require("uuid")
 connect()
 
 async function criarUsuario(form){
@@ -14,11 +15,13 @@ async function criarUsuario(form){
         console.log("Usuario já existente")
         return false
     }else{
+        const senhaDB = await criptografar(form.senha)  
         const nUser = new Usuarios({
+            _id:uuidv4(),
             nome:form.nome,
             username:form.username,
             email: form.email,
-            senha: criptodescriptografador.criptografar(form.senha)
+            senha: senhaDB
         })
         nUser.save().then(()=>{
             console.log("Usuario salvo com sucesso")
@@ -27,7 +30,6 @@ async function criarUsuario(form){
         })
         return true
     }
-   
 }
 
 module.exports = {criarUsuario}

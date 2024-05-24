@@ -16,5 +16,5 @@ const schemaPosts = new mongoose.Schema({
         required: true,
     }],
 })
-
-module.exports = {schemaPosts}
+const Posts = mongoose.model("Posts", schemaPosts)
+module.exports = {Posts}
