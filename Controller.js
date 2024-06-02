@@ -1,4 +1,4 @@
-const { criarUsuario, verificarLogin } = require("./funcoes/funcoes");
+const { criarUsuario, verificarLogin, novoPost, comentar, darLike, carregarPosts} = require("./funcoes/funcoes");
 
 class Controller {
     constructor() {
@@ -13,7 +13,20 @@ class Controller {
         return verificarLogin(form);
     }
 
+    newPost(obj){
+        return novoPost(obj)
+    }
     
+    newComment(form){
+        return comentar(form)
+    }
+
+    newLike(form){
+        return darLike(form)
+    }
+    loadPosts(username, turn){
+        return carregarPosts(username, turn)
+    }
 }
 
 // Criar uma instância do Controller

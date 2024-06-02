@@ -24,6 +24,7 @@
             id="post-input"
             placeholder="O que há de novo?"
             class="h-8 w-full rounded-full pl-4 rounded-r-md outline-none bg-indigo-100"
+            
           />
           <a href=""
             ><ion-icon
@@ -69,7 +70,7 @@
         />
 
         <div class="flex items-center gap-4 m-4 w-full">
-          <div class="flex items-center cursor-pointer select-none">
+          <div class="flex items-center cursor-pointer select-none" id="like">
             <ion-icon name="heart-outline" class="w-8 h-8"></ion-icon>
             <span class="font-bold">3</span>
           </div>
@@ -120,9 +121,11 @@
             type="text"
             placeholder="Deixe seu comentário"
             class="bg-indigo-100 w-full p-2 pl-4 font-inter rounded-3xl"
+            name="comentario1" id="comentario1"
           />
           <button
             class="hover:bg-indigo-100 p-4 flex items-center rounded-full transition-colors duration-200"
+            id="post1"><!--trocar post1 pelo numero do objeto--></button>
           >
             <ion-icon name="send-outline"></ion-icon>
           </button>
@@ -131,5 +134,9 @@
     </main>
 
     <%- include("./layouts/footer.ejs")%>
+    <script src="scripts/homepage/postF.js"></script>
+    <script src="scripts/homepage/comentario.js"></script>
+    <script src="scripts/homepage/like.js"></script>
+    <script src="scripts/homepage/carregarPosts.js"></script>
   </body>
 </html>

@@ -6,4 +6,6 @@ router.get('/', (req, res)=>{
     res.render(carregaView('homepage'))
 })
 
+
+
 module.exports = router

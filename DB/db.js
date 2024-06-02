@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-function connect(){mongoose.connect('mongodb+srv://danrod278:qsc278279wdv@crud-application-cluste.3zbzuhw.mongodb.net/?retryWrites=true&w=majority&appName=crud-application-cluster')
+async function connect(){
+  mongoose.connect('mongodb+srv://danrod278:qsc278279wdv@crud-application-cluste.3zbzuhw.mongodb.net/?retryWrites=true&w=majority&appName=crud-application-cluster')
 .then(() => {
   console.log('Connected to MongoDB');
 })

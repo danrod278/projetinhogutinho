@@ -11,8 +11,10 @@ async function comparar(senha, hashDB){
     try{
         const mash = await bcrypt.compare(senha, hashDB)
         if(mash){
+            
             return true
         }
+        
         return false
     }catch (err){
         console.log("Houve um erro na comparação: "+err)

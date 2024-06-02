@@ -20,12 +20,12 @@
         />
       </div>
 
-      <form action="/add" method="post" class="flex flex-col gap-5 w-1/2">
+      <form action="/criarUsuario" method="post" class="flex flex-col gap-5 w-1/2">
         <div class="flex flex-col gap-2">
           <label for="name-input">Nome Completo</label>
           <input
             type="text"
-            name="username"
+            name="nome"
             id="name-input"
             placeholder="Digite seu nome"
             class="border border-gray-800 rounded w-full p-2"
@@ -44,10 +44,21 @@
           />
         </div>
         <div class="flex flex-col gap-2">
+          <label for="password-input">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="password-input"
+            placeholder="Digite seu nome"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
           <label for="password-input">Senha</label>
           <input
             type="text"
-            name="password"
+            name="senha"
             id="password-input"
             placeholder="Digite seu nome"
             class="border border-gray-800 rounded w-full p-2"

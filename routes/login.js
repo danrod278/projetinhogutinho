@@ -17,11 +17,14 @@ router.post("/login", (req, res) => {
             console.log(acesso)
             if(acesso[0]){
                req.session.user = {
-                    username:acesso[1]
+                    username:acesso[1],
+                    turn:0
                 } /**/
+               
                 res.redirect('/')
             }
             else{
+
                 console.log("Login falhou")
                 res.redirect('/login')
             }

@@ -1,20 +1,42 @@
-const mongoose = require('mongoose')
-const schemaPosts = new mongoose.Schema({
-    conteudo: {
-        type: String,
-        required: true,
-    },
+const mongoose = require('mongoose');
 
-    comentarios:       
-            [{
-                type: String,
-                required: true,
-            }],
-    gosteis:
-    [{
+const comentariosSchema = new mongoose.Schema({
+  username:{
+    type:String,
+    required:true
+  },
+  conteudo:{
+    type:String,
+    required:true
+  }
+})
+
+const schemaPosts = new mongoose.Schema({
+  usuario:{
+    type:String,
+    required:true
+  },
+  conteudo: {
+    type: String,
+    required: true,
+  },
+  imagem: {
+    type: String,
+    required: false
+  },
+  comentarios: [comentariosSchema],
+  gosteis: [{
+    username:{
         type: String,
         required: true,
-    }],
-})
-const Posts = mongoose.model("Posts", schemaPosts)
-module.exports = {Posts}
+    }
+  }],
+  _id:{
+    type:String,
+    required:true
+  }
+  
+}, {timestamps:true});
+
+const Posts = mongoose.model("Posts", schemaPosts);
+module.exports = { Posts };

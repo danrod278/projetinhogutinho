@@ -7,6 +7,10 @@ const session = require("express-session");
 const login = require("./routes/login");
 const createUser = require("./routes/novoUsuario");
 const home = require("./routes/home");
+const post = require('./routes/post')
+const comentar = require('./routes/comentar')
+const like = require("./routes/like")
+const carregaPosts = require('./routes/carregaPosts')
 
 const verificaSecao = require("./middleware/verificaSecao");
 
@@ -34,9 +38,13 @@ app.set("views", path.join(__dirname, "views"));
 app.use('/', login);
 app.use('/', createUser);
 app.use('/', verificaSecao, home);
+app.use('/', verificaSecao, post)
+app.use('/', verificaSecao, comentar)
+app.use('/', verificaSecao, like)
+app.use('/', verificaSecao, carregaPosts)
 
 // Iniciar o servidor
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
     console.log("Esta rodando na porta " + port);
 });
