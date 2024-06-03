@@ -14,13 +14,14 @@
   <img width="100" alt="Preview" id="preview" />
   
   <button type="button" id="download">Download</button>
+  <img src="" alt="">
   <script>
     'use strict';
 
 file.addEventListener("change", previewFile);
 download.addEventListener("click", downloadFile);
 output.addEventListener("input", previewText);
-/*
+
 function previewFile({ target }) {
   const file = target.files[0];
   const reader = new FileReader();
@@ -35,7 +36,7 @@ function previewFile({ target }) {
 function previewText({ target }) {
   let base64 = target.value.replace(/^data:image\/[a-z]+;base64,/, "");
   preview.src = `data:image/png;base64,${base64}`;
-}*/
+}/**/
   </script>
 </body>
 </html>
