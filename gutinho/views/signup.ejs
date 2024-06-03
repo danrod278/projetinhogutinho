@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <%- include("./configs/head.ejs")%>
+    <title>Shary - Sign Up</title>
+  </head>
+  <body>
+    <%- include("./layouts/header.ejs")%>
+
+    <main
+      class="w-10/12 m-auto my-14 flex border-2 border-indigo-300 rounded-md py-5 px-2 justify-around items-center"
+    >
+      <div>
+        <h2 class="text-white text-2xl font-bold font-lobister">Shary</h2>
+        <p>Cadastre-se para ver fotos e vídeos dos seus amigos.</p>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/5463/5463687.png"
+          alt="illustration"
+          class="w-64 mx-auto"
+        />
+      </div>
+
+      <form action="/criarUsuario" method="post" class="flex flex-col gap-5 w-1/2">
+        <div class="flex flex-col gap-2">
+          <label for="name-input">Nome Completo</label>
+          <input
+            type="text"
+            name="nome"
+            id="name-input"
+            placeholder="Digite seu nome"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="email-input">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            placeholder="Digite seu email"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="password-input">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="password-input"
+            placeholder="Digite seu nome"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="password-input">Senha</label>
+          <input
+            type="text"
+            name="senha"
+            id="password-input"
+            placeholder="Digite seu nome"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="border-2 border-indigo-300 bg-indigo-300 p-2 rounded text-white hover:bg-white hover:text-indigo-300 font-bold transition-colors"
+        >
+          Cadastre-se
+        </button>
+      </form>
+    </main>
+
+    <%- include("./layouts/footer.ejs")%>
+  </body>
+</html>

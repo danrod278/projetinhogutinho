@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <%- include("./configs/head.ejs")%>
+    <title>Shary - Sign In</title>
+  </head>
+  <body>
+    <%- include("./layouts/header.ejs")%>
+
+    <main
+      class="w-10/12 h-4/5 m-auto my-14 flex py-5 px-2 justify-around items-center"
+    >
+      <div>
+        <h2 class="text-indigo-300 text-3xl font-bold font-lobister mb-2">Shary</h2>
+        <p class="font-inter">Faça login para ver fotos e vídeos dos seus amigos.</p>
+       <img src="https://cdn-icons-png.flaticon.com/256/5463/5463661.png" 
+       alt="illustration"
+       class="w-64 mx-auto">
+      </div>
+
+      <form action="/login" method="post" class="flex flex-col gap-5 w-1/2">
+    
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="email-input">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            placeholder="Digite seu email"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="password-input" class="text-indigo-950">Senha</label>
+          <input
+            type="text"
+            name="password"
+            id="password-input"
+            placeholder="Digite seu nome"
+            class="border border-gray-800 rounded w-full p-2"
+            required
+          />
+        </div>
+
+        <label class="flex gap-2 cursor-pointer">
+          <input type="checkbox" class="checked:bg-indigo-300 cursor-pointer"> 
+          Lembre-se de mim
+        </label>
+
+        <button
+          type="submit"
+          class="border-2 border-indigo-300 bg-indigo-300 p-2 rounded text-white hover:bg-white hover:text-indigo-300 font-bold transition-colors"
+        >
+          Login
+        </button>
+      </form>
+    </main>
+
+    <%- include("./layouts/footer.ejs")%>
+  </body>
+</html>
