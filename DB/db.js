@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-
+const path = require('path')
+require('dotenv').config({path:path.resolve(__dirname, '../.env')})
+const chaveConexaoDB = process.env.URI_MONGODB
 async function connect(){
-  mongoose.connect('mongodb+srv://danrod278:qsc278279wdv@crud-application-cluste.3zbzuhw.mongodb.net/?retryWrites=true&w=majority&appName=crud-application-cluster')
+  mongoose.connect(chaveConexaoDB)
 .then(() => {
   console.log('Connected to MongoDB');
 })
