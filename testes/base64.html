@@ -6,36 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-  <label for="file">Select an image</label>
-  <input type="file" id="file" />
-  
-  <textarea id="output"></textarea>
-  
-  <img width="100" alt="Preview" id="preview" />
-  
-  <button type="button" id="download">Download</button>
-  <script>
-    'use strict';
-
-file.addEventListener("change", previewFile);
-download.addEventListener("click", downloadFile);
-output.addEventListener("input", previewText);
-/*
-function previewFile({ target }) {
-  const file = target.files[0];
-  const reader = new FileReader();
-
-  reader.readAsDataURL(file);
-
-  reader.onload = () => {
-    output.value = reader.result;
-    preview.src = reader.result;
-  };
-}
-function previewText({ target }) {
-  let base64 = target.value.replace(/^data:image\/[a-z]+;base64,/, "");
-  preview.src = `data:image/png;base64,${base64}`;
-}*/
-  </script>
+    <div id="main"></div>
+  <script src="teste.js"></script>
 </body>
 </html>

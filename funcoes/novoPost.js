@@ -12,7 +12,7 @@ async function novoPost(obj){
             const addPost = new Posts({
                 usuario:obj.usuario,
                 conteudo:obj.conteudo,
-                imagem:obj.img,
+                imagem:obj.imagem,
                 _id:uuidv4()
             })
             await addPost.save()

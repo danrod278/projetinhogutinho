@@ -6,7 +6,9 @@ async function carregarPosts(username, turn){
     
     try{
         if(verificarLogin(username, true)){
-            const posts = await Posts.find().sort({createdAt:-1}).skip(2*turn).limit(2)
+            const posts = await Posts.find().sort({createdAt:-1}).
+            skip(5*turn)
+            .limit(5)
             
             return posts
         }

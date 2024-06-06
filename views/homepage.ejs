@@ -3,12 +3,13 @@
   <head>
     <%- include("./configs/head.ejs") %>
     <title>Shary - Homepage</title>
+    <link rel="stylesheet" href="styles/homepage.css">
   </head>
   <body class="bg-indigo-50">
     <%- include("./layouts/header_homepage.ejs")%>
-
-    <main class="w-10/12 m-auto my-4 min-h-full">
-      <div
+  
+    
+    <div
         class="flex items-center bg-white border rounded-3xl p-4 my-4 gap-10"
       >
         <img
@@ -26,117 +27,20 @@
             class="h-8 w-full rounded-full pl-4 rounded-r-md outline-none bg-indigo-100"
             
           />
-          <a href=""
-            ><ion-icon
-              name="images-outline"
-              class="flex items-center p-4 hover:bg-indigo-200 rounded-full transition-colors duration-200"
-            ></ion-icon
-          ></a>
+        <input type="file" id="loadImages">
         </div>
 
         <button
           class="rounded-full bg-indigo-300 p-4 w-32 text-white font-bold transition-colors duration-200 hover:bg-indigo-400 font-sora select-none"
+          id="post1"
         >
           Publicar
         </button>
       </div>
-
-      <div class="bg-white border rounded-3xl p-4 gap-10 my-4">
-        <div class="flex items-center justify-between w-full mb-4">
-          <div class="flex gap-4 items-center">
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="foto-de-perfil"
-              class="w-12 h-12 rounded-full object-cover"
-            />
-            <div>
-              <h2 class="text-indigo-950 font-bold font-sora select-none">
-                Rayssa Kelly
-              </h2>
-              <p class="text-gray-400 font-inter select-none">1 hora atrás</p>
-            </div>
-          </div>
-          <a
-            href=""
-            class="p-2 hover:bg-indigo-100 rounded-full flex items-center transition-colors duration-200"
-            ><ion-icon name="ellipsis-vertical-sharp"></ion-icon
-          ></a>
-        </div>
-
-        <img
-          src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="imagem-da-postagem"
-          class="w-full rounded-2xl h-96 object-cover select-none"
-        />
-
-        <div class="flex items-center gap-4 m-4 w-full">
-          <div class="flex items-center cursor-pointer select-none" id="like">
-            <ion-icon name="heart-outline" class="w-8 h-8"></ion-icon>
-            <span class="font-bold">3</span>
-          </div>
-          <div class="flex items-center cursor-pointer select-none">
-            <ion-icon name="chatbubble-outline" class="w-8 h-8"></ion-icon>
-            <span class="font-bold">5</span>
-          </div>
-        </div>
-
-        <hr class="border-t border-gray-200" />
-
-        <div>
-          <div>
-            <div class="m-4 flex gap-2">
-              <img
-                src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500"
-              />
-              <div>
-                <h2 class="font-sora font-bold">Pablo Viana</h2>
-                <p class="font-inter">Esse rolê foi o melhor de todos!</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="m-4 flex gap-2">
-              <img
-                src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500"
-              />
-              <div>
-                <h2 class="font-sora font-bold">Tais Fernandes</h2>
-                <p class="font-inter">Melhor dia da minha vida! ❤</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex items-center m-4 gap-4">
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="foto-de-perfil"
-            class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500"
-          />
-          <input
-            type="text"
-            placeholder="Deixe seu comentário"
-            class="bg-indigo-100 w-full p-2 pl-4 font-inter rounded-3xl"
-            name="comentario1" id="comentario1"
-          />
-          <button
-            class="hover:bg-indigo-100 p-4 flex items-center rounded-full transition-colors duration-200"
-            id="post1"><!--trocar post1 pelo numero do objeto--></button>
-          >
-            <ion-icon name="send-outline"></ion-icon>
-          </button>
-        </div>
-      </div>
-    </main>
-
+    <div id="main"></div>
+    <script src="scripts/homepage/postF.js"></script><!---->
+    <script type="module" src="scripts/homepage/carregarPosts.js"></script>
+    <script type="module" src="scripts/homepage/objeto.js"></script>
     <%- include("./layouts/footer.ejs")%>
-    <script src="scripts/homepage/postF.js"></script>
-    <script src="scripts/homepage/comentario.js"></script>
-    <script src="scripts/homepage/like.js"></script>
-    <script src="scripts/homepage/carregarPosts.js"></script>
   </body>
 </html>

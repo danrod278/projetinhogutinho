@@ -11,17 +11,19 @@ const post = require('./routes/post')
 const comentar = require('./routes/comentar')
 const like = require("./routes/like")
 const carregaPosts = require('./routes/carregaPosts')
+const turn = require('./routes/turn')
 
 const verificaSecao = require("./middleware/verificaSecao");
 
 // Configuração da sessão
-app.use(
+/**/app.use(
     session({
       secret: "40028922",
       resave: false,
       saveUninitialized: true,
     })
   )
+
 
 // Middleware de análise do corpo da solicitação
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,6 +44,7 @@ app.use('/', verificaSecao, post)
 app.use('/', verificaSecao, comentar)
 app.use('/', verificaSecao, like)
 app.use('/', verificaSecao, carregaPosts)
+app.use('/', verificaSecao, turn)
 
 // Iniciar o servidor
 const port = 3001;

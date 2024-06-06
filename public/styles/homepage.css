@@ -1,0 +1,13 @@
+.username{
+    font-size: 15px;
+    color: blue;
+}
+.conteudo{
+    font-size: 17px;
+    color: rgb(65, 65, 65);
+}
+.main{
+    padding: 50px;
+    margin: 0 auto;
+    display: block;
+}

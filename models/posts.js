@@ -18,7 +18,7 @@ const schemaPosts = new mongoose.Schema({
   },
   conteudo: {
     type: String,
-    required: true,
+    required: false,
   },
   imagem: {
     type: String,

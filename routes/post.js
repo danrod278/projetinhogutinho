@@ -3,14 +3,22 @@
   const {carregaView, controller} = require('./dependencias')
 
   router.post("/post", (req, res)=>{
-    const body = req.body
-    console.log(body)
-    const obj = {
-      usuario:req.session.user.username,
-      conteudo:body.input,
-    } 
-    console.log("obj: "+obj.usuario)
-    controller.newPost(obj)
+    try{
+      
+      const body = req.body
+      console.log(body.input.length>0)
+      if(body.input.length>0 || body.image!=null){
+        const obj = {
+          usuario:req.session.user.username,
+          conteudo:body.input,
+          imagem:req.body.image
+        } 
+        controller.newPost(obj)
+      }
+      
+    }catch (err){
+      console.log("Houve um erro ao enviar os posts (/posts): "+err)
+    }
   })
 
   module.exports = router
