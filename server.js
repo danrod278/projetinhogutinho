@@ -1,3 +1,5 @@
+require('dotenv')
+
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -18,7 +20,7 @@ const verificaSecao = require("./middleware/verificaSecao");
 // Configuração da sessão
 /**/app.use(
     session({
-      secret: "40028922",
+      secret: process.env.SECRET,
       resave: false,
       saveUninitialized: true,
     })
