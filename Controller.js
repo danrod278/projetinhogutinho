@@ -1,4 +1,4 @@
-const { criarUsuario, verificarLogin, novoPost, comentar, darLike, carregarPosts} = require("./funcoes/funcoes");
+const { criarUsuario, verificarLogin, novoPost, comentar, darLike, carregarPosts, deletarPost} = require("./funcoes/funcoes");
 
 class Controller {
     constructor() {
@@ -26,6 +26,9 @@ class Controller {
     }
     loadPosts(username, turn){
         return carregarPosts(username, turn)
+    }
+    deletePost(id){
+        deletarPost(id)
     }
 }
 

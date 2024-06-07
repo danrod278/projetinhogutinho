@@ -14,6 +14,7 @@ const comentar = require('./routes/comentar')
 const like = require("./routes/like")
 const carregaPosts = require('./routes/carregaPosts')
 const turn = require('./routes/turn')
+const deletePost = require("./routes/deletePosts")
 
 const verificaSecao = require("./middleware/verificaSecao");
 
@@ -47,6 +48,7 @@ app.use('/', verificaSecao, comentar)
 app.use('/', verificaSecao, like)
 app.use('/', verificaSecao, carregaPosts)
 app.use('/', verificaSecao, turn)
+app.use('/', verificaSecao, deletePost)
 
 // Iniciar o servidor
 const port = 3001;
