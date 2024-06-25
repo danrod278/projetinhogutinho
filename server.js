@@ -51,7 +51,7 @@ app.use('/', verificaSecao, turn)
 app.use('/', verificaSecao, deletePost)
 
 // Iniciar o servidor
-const port = 3001;
+const port = 3000;
 app.listen(port, () => {
     console.log("Esta rodando na porta " + port);
 });
